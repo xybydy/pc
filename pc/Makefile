@@ -8,7 +8,7 @@ PKG_NAME:=podman-compose
 PKG_VERSION:=1.5.0
 PKG_RELEASE:=1
 
-PYPI_NAME:=podman-compose
+PYPI_NAME:=$(PKG_NAME)
 PKG_HASH:=5cc09362852711ce5d27648e41cb5fd058ea5a75acbcdec2f8d0b0c114a18e8e
 
 
@@ -21,7 +21,7 @@ define Package/podman-compose
   CATEGORY:=Utilities
   TITLE:=Podman Compose
   URL:=https://podman.io
-  DEPENDS:=+python3-light +podman
+  DEPENDS:=+python3 +podman
 endef
 
 define Package/podman-compose/description
