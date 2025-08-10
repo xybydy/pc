@@ -1,0 +1,70 @@
+name: Build Packages
+
+on:
+  push:
+    tags:
+      - "*"
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build ${{ matrix.arch }}-${{ matrix.sdk }}
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    strategy:
+      fail-fast: false
+      matrix:
+        arch:
+          - aarch64_generic
+          - x86_64
+        sdk:
+          - openwrt-24.10
+          # - openwrt-23.05
+          # - SNAPSHOT
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+        
+      - name: Build Packages
+        uses: openwrt/gh-action-sdk@main
+        # uses: sbwml/openwrt-gh-action-sdk@go1.24
+        env:
+          ARCH: ${{ matrix.arch }}-${{ matrix.sdk }}
+          FEEDNAME: packages_ci
+          PACKAGES: pc
+          NO_REFRESH_CHECK: true
+          #V: s
+          #IGNORE_ERRORS: true
+
+      - name: Print path
+        run: ls -lR ${{ github.workspace }}/
+  
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.arch }}-${{ matrix.sdk }}
+          path: |
+            bin/packages/${{ matrix.arch }}/packages_ci/*.apk
+            bin/packages/${{ matrix.arch }}/packages_ci/*.ipk
+
+            # bin/packages/${{ matrix.arch }}/*.apk
+            # bin/packages/${{ matrix.arch }}/*.ipk
+
+      # - name: Create compress files
+      #   continue-on-error: true
+      #   run: |
+      #     tar -zcvf ${{ matrix.sdk }}-${{ matrix.arch }}.tar.gz -C bin/packages/${{ matrix.arch }}/ packages_ci
+
+      # - name: Upload packages
+      #   uses: ncipollo/release-action@v1
+      #   with:
+      #     name: ${{ github.ref_name }}
+      #     token: ${{ secrets.WRT_TOKEN }}
+      #     allowUpdates: true
+      #     replacesArtifacts: true
+      #     prerelease: false
+      #     artifacts: "${{ matrix.sdk }}-${{ matrix.arch }}.ipk"
+      #     # artifacts: "${{ matrix.sdk }}-${{ matrix.arch }}.tar.gz"
