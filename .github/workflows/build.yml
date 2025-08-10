@@ -17,7 +17,7 @@ jobs:
       matrix:
         arch:
           - aarch64_generic
-          - x86_64
+          # - x86_64
         sdk:
           - openwrt-24.10
           # - openwrt-23.05
@@ -36,6 +36,7 @@ jobs:
           FEEDNAME: packages_ci
           PACKAGES: pc
           NO_REFRESH_CHECK: true
+          V: w
           #V: s
           #IGNORE_ERRORS: true
 
