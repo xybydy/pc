@@ -8,11 +8,14 @@ PKG_NAME:=podman-compose
 PKG_VERSION:=1.5.0
 PKG_RELEASE:=1
 
-PYPI_NAME:=$(PKG_NAME)
+# PYPI_NAME:=$(PKG_NAME)
+PKG_SOURCE_URL:=https://files.pythonhosted.org/packages/24/91/b168a685ca6813ff9b467d76a7365a099aec16a1032b6edf39b0cd19f6c3/podman_compose-1.5.0.tar.gz
 PKG_HASH:=5cc09362852711ce5d27648e41cb5fd058ea5a75acbcdec2f8d0b0c114a18e8e
 
+PKG_LICENSE:=GPL-2.0-only
 
-include ../pypi.mk
+
+# include ../pypi.mk
 include $(INCLUDE_DIR)/package.mk
 include ../python3-package.mk
 
@@ -30,4 +33,3 @@ endef
 
 $(eval $(call Py3Package,podman-compose))
 $(eval $(call BuildPackage,podman-compose))
-$(eval $(call BuildPackage,podman-compose-src))
