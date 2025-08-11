@@ -36,8 +36,7 @@ jobs:
           FEEDNAME: packages_ci
           PACKAGES: pc
           NO_REFRESH_CHECK: true
-          V: w
-          #V: s
+          V: s
           #IGNORE_ERRORS: true
 
       - name: Print path
