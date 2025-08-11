@@ -17,7 +17,9 @@ PKG_LICENSE:=GPL-2.0-only
 
 
 include $(INCLUDE_DIR)/package.mk
-include ../python3-package.mk
+# include ../python3-package.mk
+include $(TOPDIR)/feeds/packages/lang/python/python3-version.mk
+
 
 define Package/podman-compose
   SECTION:=utils
