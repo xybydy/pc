@@ -16,7 +16,7 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/podman-compose
 
 PKG_LICENSE:=GPL-2.0-only
 
-include ../pypi.mk
+include $(TOPDIR)/feeds/packages/lang/python/pypi.mk
 include $(INCLUDE_DIR)/package.mk
 include $(TOPDIR)/feeds/packages/lang/python/python3-package.mk
 #include $(TOPDIR)/feeds/packages/lang/python/python3-version.mk
