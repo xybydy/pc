@@ -35,3 +35,4 @@ endef
 
 $(eval $(call Py3Package,podman-compose))
 $(eval $(call BuildPackage,podman-compose))
+$(eval $(call BuildPackage,podman-compose-src))
