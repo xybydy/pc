@@ -5,7 +5,7 @@ PKG_NAME:=podman-compose
 PKG_VERSION:=1.5.0
 PKG_RELEASE:=1
 PYPI_NAME:=podman-compose
-PKG_HASH:=skip-this-if-building-from-git
+PKG_HASH:=5cc09362852711ce5d27648e41cb5fd058ea5a75acbcdec2f8d0b0c114a18e8e
 
 PKG_MAINTAINER:=xybydy
 PKG_LICENSE:=GPL-3.0
