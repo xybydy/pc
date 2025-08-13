@@ -28,7 +28,7 @@ define Package/podman-compose
   CATEGORY:=Utilities
   TITLE:=Podman Compose
   URL:=https://podman.io
-  DEPENDS:=+python3-light
+  DEPENDS:=+python3-light +python3-setuptools
 endef
 
 define Package/podman-compose/description
