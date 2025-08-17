@@ -34,7 +34,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}-${{ matrix.sdk }}
           FEEDNAME: packages_ci
-          PACKAGES: pc
+          PACKAGES: openssl
           NO_REFRESH_CHECK: true
           V: s
           #IGNORE_ERRORS: true
