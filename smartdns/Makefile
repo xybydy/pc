@@ -5,13 +5,19 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=smartdns
-PKG_VERSION:=1.2025.v46.1.79_with_ui
+PKG_VERSION:=1.2025.v46.1.80_with_ui
 PKG_RELEASE:=1
 PKG_MIRROR_HASH:=skip 
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/PikuZheng/smartdns/archive/refs/tags/$(PKG_VERSION).tar.gz
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-Release$(PKG_VERSION)
+
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_URL:=https://www.github.com/PikuZheng/smartdns.git
+PKG_SOURCE_VERSION:=ad79d884d618db69502fa237f1cd4b6d10a07240
+PKG_MIRROR_HASH:=skip
+
+# PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+# PKG_SOURCE_URL:=https://github.com/PikuZheng/smartdns/archive/refs/tags/$(PKG_VERSION).tar.gz
+# PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-Release$(PKG_VERSION)
 
 PKG_MAINTAINER:=Nick Peng <pymumu@gmail.com>
 PKG_LICENSE:=GPL-3.0-or-later
