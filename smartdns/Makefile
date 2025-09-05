@@ -10,14 +10,12 @@ PKG_RELEASE:=1
 
 
 
-PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://www.github.com/PikuZheng/smartdns.git
-PKG_SOURCE_VERSION:=ad79d884d618db69502fa237f1cd4b6d10a07240
 PKG_MIRROR_HASH:=skip
 
-# PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-# PKG_SOURCE_URL:=https://github.com/PikuZheng/smartdns/archive/refs/tags/$(PKG_VERSION).tar.gz
-# PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-Release$(PKG_VERSION)
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://github.com/PikuZheng/smartdns/archive/refs/tags/$(PKG_VERSION).tar.gz
+PKG_HASH:=7dddc9c7a91b9192335aaaaa566ba7fe2c62bb23c0c696fc6583b9ae87ebe33c
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-Release$(PKG_VERSION)
 
 PKG_MAINTAINER:=Nick Peng <pymumu@gmail.com>
 PKG_LICENSE:=GPL-3.0-or-later
