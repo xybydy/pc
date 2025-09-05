@@ -9,10 +9,11 @@ PKG_VERSION:=1.2025.v46.1.80_with_ui
 PKG_RELEASE:=1
 
 
+smartdns_with_ui.1.2025.v46.1.80.aarch64.tar.gz
+https://github.com/PikuZheng/smartdns/releases/download/1.2025.v46.1.80_with_ui/smartdns_with_ui.1.2025.v46.1.80_with_ui.aarch64.tar.gz/smartdns-1.2025.v46.1.80_with_ui.tar.gz
+https://github.com/PikuZheng/smartdns/releases/download/1.2025.v46.1.80_with_ui/smartdns_with_ui.1.2025.v46.1.80.aarch64.tar.gz
 
-PKG_MIRROR_HASH:=skip
-
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+# PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 # PKG_SOURCE_URL:=https://github.com/PikuZheng/smartdns/archive/refs/tags/$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/PikuZheng/smartdns/releases/download/$(PKG_VERSION)/smartdns_with_ui.$(PKG_VERSION).aarch64.tar.gz
 PKG_HASH:=7dddc9c7a91b9192335aaaaa566ba7fe2c62bb23c0c696fc6583b9ae87ebe33c
