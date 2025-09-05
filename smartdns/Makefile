@@ -7,7 +7,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=smartdns
 PKG_VERSION:=1.2025.v46.1.79_with_ui
 PKG_RELEASE:=1
-PKG_SOURCE_IGNORE:=1
+PKG_MIRROR_HASH:=skip 
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/PikuZheng/smartdns/archive/refs/tags/$(PKG_VERSION).tar.gz
