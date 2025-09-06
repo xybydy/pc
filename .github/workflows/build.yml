@@ -34,7 +34,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}-${{ matrix.sdk }}
           FEEDNAME: packages_ci
-          PACKAGES: openssl smartdns
+          PACKAGES: smartdns
           NO_REFRESH_CHECK: true
           V: s
           FIXUP: 1
