@@ -12,7 +12,7 @@ PKG_RELEASE:=1
 PKG_SOURCE:=$(PKG_NAME)_with_ui.$(PKG_VERSION).aarch64.tar.gz
 PKG_SOURCE_URL:=https://github.com/PikuZheng/smartdns/releases/download/$(PKG_VERSION)_with_ui
 PKG_HASH:=3a01dc983c0f73497fcd78ec43c1556cbf8d6735f3943d4aa9926fad77ea9423
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)_with_ui.$(PKG_VERSION).aarch64
+# PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)_with_ui.$(PKG_VERSION).aarch64
 
 PKG_MAINTAINER:=Nick Peng <pymumu@gmail.com>
 PKG_LICENSE:=GPL-3.0-or-later
